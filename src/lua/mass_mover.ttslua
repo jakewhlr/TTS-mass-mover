@@ -1,0 +1,28 @@
+zone_id = ""
+delta_x = 0
+delta_y = 0
+delta_z = 0
+
+function save_zone_id(player, value, id)
+  zone_id = value
+end
+
+function save_detla_x(player, value, id)
+  delta_x = value
+end
+
+function save_detla_y(player, value, id)
+  delta_y = value
+end
+
+function save_detla_z(player, value, id)
+  delta_z = value
+end
+
+function move_objects()
+  zone = getObjectFromGUID(zone_id)
+  objects = zone.getObjects()
+  for _, obj in pairs(objects) do
+    obj.setPosition(obj.getPosition() + Vector(delta_x, delta_y, delta_z))
+  end
+end

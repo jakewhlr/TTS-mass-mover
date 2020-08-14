@@ -1,0 +1,9 @@
+<VerticalLayout offsetXY="0 150" width="150" height="150" spacing="10">
+  <InputField id="ZoneIDInputField" placeholder="Zone ID" onEndEdit="save_zone_id"></InputField>
+  <HorizontalLayout spacing="10">
+    <InputField id="DeltaXInputField" placeholder="&#916;X" characterValidation="Decimal" onEndEdit="save_detla_x"></InputField>
+    <InputField id="DeltaYInputField" placeholder="&#916;Y" characterValidation="Decimal" onEndEdit="save_detla_y"></InputField>
+    <InputField id="DeltaZInputField" placeholder="&#916;Z" characterValidation="Decimal" onEndEdit="save_detla_z"></InputField>
+  </HorizontalLayout>
+  <Button width="10" height="10" onClick="move_objects">Move</Button>
+</VerticalLayout>
